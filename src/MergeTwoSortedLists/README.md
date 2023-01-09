@@ -1,6 +1,6 @@
 ## Merge Two Sorted Lists
 
-You are given the heads of two sorted linked lists **list1** and **list2**.
+You are given the heads of two sorted linked lists ```list1``` and ```list2```.
 
 Merge the two lists in a one **sorted** list. The list should be made by splicing together the nodes of the first two lists.
 
@@ -31,8 +31,14 @@ Input: list1 = [], list2 = [0]
 Output: [0]
 ```
 
-Constraints:
+**Constraints:**
 
-- The number of nodes in both lists is in the range [0, 50].
-- -100 <= Node.val <= 100
-- Both list1 and list2 are sorted in **non-decreasing** order.
+- The number of nodes in both lists is in the range ```[0, 50]```.
+- ```-100 <= Node.val <= 100```
+- Both ```list1``` and ```list2``` are sorted in **non-decreasing** order.
+
+**Constraints:**
+- Linked List
+- Recursion
+
+https://leetcode.com/problems/merge-two-sorted-lists/
