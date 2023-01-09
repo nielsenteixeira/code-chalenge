@@ -6,3 +6,5 @@ Solved Challenges:
 
 * [Two Sum](https://github.com/nielsenteixeira/code-challenge/tree/main/src/TwoSum)
 * [ValidParentheses](https://github.com/nielsenteixeira/code-challenge/tree/main/src/ValidParentheses)
+* [FloodFill](https://github.com/nielsenteixeira/code-challenge/tree/main/src/FloodFill)
+* [MergeTwoSortedLists](https://github.com/nielsenteixeira/code-challenge/tree/main/src/MergeTwoSortedLists)
