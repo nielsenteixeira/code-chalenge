@@ -1,4 +1,4 @@
-package MergeTwoSortedLists;
+package org.nielsen.mergeTwoSortedLists;
 
 public class MergeTwoSortedLists {
 

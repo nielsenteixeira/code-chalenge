@@ -1,4 +1,4 @@
-package FloodFill;
+package org.nielsen.floodFill;
 
 public class FloodFill {
 

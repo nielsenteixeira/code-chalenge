@@ -1,4 +1,4 @@
-package TwoSum;
+package org.nielsen.twoSum;
 
 import java.util.HashMap;
 import java.util.Map;

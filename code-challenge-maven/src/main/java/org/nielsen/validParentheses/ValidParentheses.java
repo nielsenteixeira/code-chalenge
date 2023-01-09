@@ -1,4 +1,4 @@
-package ValidParentheses;
+package org.nielsen.validParentheses;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package BestTimeToBuyAndSellStock;
+package org.nielsen.bestTimeToBuyAndSellStock;
 
 public class BestTimeToBuyAndSellStock {
 
