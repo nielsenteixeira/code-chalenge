@@ -8,23 +8,28 @@ class ValidPalindromeTest {
 
     @Test
     fun `isPalindrome check for palindromic string`() {
-        val validPalindromes = listOf("civic", "peep", "deed", "rotator", "kayak", "racecar", "Never odd or even")
-        val wordIndex = (0..6).random()
-        val validPalindrome = ValidPalindrome()
+        val listAssert = mutableListOf<Boolean>()
+        val palindromes = listOf("civic", "peep", "deed", "rotator", "kayak", "racecar", "Never odd or even")
+
         //Act
-        val result = validPalindrome.isPalindrome(validPalindromes[wordIndex])
+        palindromes.forEach {
+            listAssert.add(ValidPalindrome.isPalindrome(it))
+        }
+
         //Assert
-        assertEquals(true, result)
+        assertEquals(true, !listAssert.contains(false))
     }
 
     @Test
     fun `isPalindrome check for non-palindromic string`() {
-        val validPalindromes = listOf("Java", "kotlin", "Javascript", "Python", "C#")
-        val wordIndex = (0..4).random()
-        val validPalindrome = ValidPalindrome()
+        val listAssert = mutableListOf<Boolean>();
+        val nonPalindromes = listOf("Java", "kotlin", "Javascript", "Python", "C#")
+
         //Act
-        val result = validPalindrome.isPalindrome(validPalindromes[wordIndex])
+        nonPalindromes.forEach {
+            listAssert.add(ValidPalindrome.isPalindrome(it))
+        }
         //Assert
-        assertEquals(false, result)
+        assertEquals(false, !listAssert.contains(true))
     }
 }

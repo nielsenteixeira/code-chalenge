@@ -4,32 +4,32 @@ import java.util.ArrayList;
 
 public class ValidParentheses {
 
-    String openParentheses = "(";
-    String openBrakets = "[";
-    String openBrace = "{";
+    static final String openParentheses = "(";
+    static final String openBrakets = "[";
+    static final String openBrace = "{";
 
-    final String closeParentheses = ")";
-    final String closeBrakets = "]";
-    final String closeBrace = "}";
+    static final String closeParentheses = ")";
+    static final String closeBrakets = "]";
+    static final String closeBrace = "}";
 
-    private boolean isOpenSymbol(String s) {
+    private static boolean isOpenSymbol(String s) {
         return s.equals(openBrace) || s.equals(openBrakets) || s.equals(openParentheses);
     }
 
-    private boolean isCloseSymbol(String s) {
+    private static boolean isCloseSymbol(String s) {
         return s.equals(closeBrace) || s.equals(closeBrakets) || s.equals(closeParentheses);
     }
 
-    public boolean isValid(String s) {
+    public static boolean isValid(String s) {
 
         String[] p = s.split("");
-        ArrayList<String> aux = new ArrayList<String>();
-        if (p.length == 1 || p.length % 2 != 0 || (p.length >  1 && isCloseSymbol(p[0]))) {
+        ArrayList<String> aux = new ArrayList<>();
+        if (p.length % 2 != 0 || (p.length > 1 && isCloseSymbol(p[0]))) {
             return false;
         }
-        for (int i = 0; i < p.length; i ++) {
-            if (isOpenSymbol(p[i])) {
-                aux.add(p[i]);
+        for (String value : p) {
+            if (isOpenSymbol(value)) {
+                aux.add(value);
                 continue;
             }
 
@@ -37,26 +37,25 @@ public class ValidParentheses {
                 return false;
             }
             String last;
-            switch (p[i]) {
-                case closeParentheses:
+            switch (value) {
+                case closeParentheses -> {
                     last = aux.remove(aux.size() - 1);
-                    if (last.equals(openBrace) || last.equals(openBrakets)){
+                    if (last.equals(openBrace) || last.equals(openBrakets)) {
                         return false;
                     }
-                    break;
-                case closeBrace:
+                }
+                case closeBrace -> {
                     last = aux.remove(aux.size() - 1);
-                    if (last.equals(openParentheses) || last.equals(openBrakets)){
+                    if (last.equals(openParentheses) || last.equals(openBrakets)) {
                         return false;
                     }
-                    break;
-                case closeBrakets:
+                }
+                case closeBrakets -> {
                     last = aux.remove(aux.size() - 1);
-                    if (last.equals(openParentheses) || last.equals(openBrace)){
+                    if (last.equals(openParentheses) || last.equals(openBrace)) {
                         return false;
                     }
-                    break;
-
+                }
             }
         }
         return aux.isEmpty();
