@@ -2,7 +2,7 @@ package org.nielsen.mergeTwoSortedLists;
 
 public class MergeTwoSortedLists {
 
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode result = new ListNode(0);
         ListNode node = result;
 
